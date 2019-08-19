@@ -8,9 +8,14 @@
     <script src="../dist/ng-custom-elements/runtime.ec2944dd8b20ec099bf3.js"></script>
     <script src="../dist/ng-custom-elements/polyfills.9d3a8743be9f041e6ba8.js"></script>
     <script src="../dist/ng-custom-elements/scripts.9ddf727ecc94cd123172.js"></script>
-    <script src="../dist/ng-custom-elements/main.e737d29278cb9ad363b0.js"></script>
+    <script src="../dist/ng-custom-elements/main.eec431d6cb1e4e5625ed.js"></script>
   </head>
   <body>
-    <popup-element></popup-element>
+    <popup-element data-string="this is string"></popup-element>
+    <script>
+      var dataObj = { test: 'test' };
+      const ngElement = document.querySelector('popup-element');
+      ngElement.data = dataObj;
+    </script>
   </body>
 </html>
